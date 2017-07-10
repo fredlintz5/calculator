@@ -2,6 +2,9 @@ window.onload = function() {
 
 	var display = document.getElementById('display');
 	var buttons = document.getElementById('buttons');
+	//var regEx = /0-9./gi;
+	//var operators = /+-=*\//gi;
+
 
 	buttons.addEventListener('click', function(event) {
 		
@@ -20,10 +23,37 @@ window.onload = function() {
 		if (value === 'AC') {
 			display.innerHTML = '';
 		}
+
 			
 	});
+
+
+	document.addEventListener('keypress', function(event) {
+	
+	var inputKey = String.fromCharCode(event.keyCode);
+
+		if (event.keyCode === 13 || event.keyCode === 61) {
 			
-};
+			display.innerHTML = eval(display.innerHTML);
+		
+		} else {
+
+			display.innerHTML += inputKey;
+		}	
+	});
+
+	document.addEventListener('keydown', function(event) {
+
+		if (event.keyCode === 8) {
+		
+			display.innerHTML = '';
+		}	
+			
+	});
+
+}
+
+
 
 
 
