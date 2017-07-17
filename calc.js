@@ -5,7 +5,9 @@ window.onload = function() {
 	var display = document.getElementById('display');
 	var buttons = document.getElementById('buttons');
 	
-	//these are variables I was thinking I would use to control what characters can be pressed in the calculator	
+
+
+	//these are variables I was thinking i would use to control what characters can be pressed in the calculator	
 	//var regEx = /0-9./gi;
 	//var operators = /+-=*\//gi;
 
